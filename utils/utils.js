@@ -17,6 +17,6 @@ export function getProgramInstance(connection, wallet) {
 
     const program = new anchor.Program(idl,programId,provider)
 
-    return program
+    return program 
 
 }

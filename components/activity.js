@@ -10,7 +10,7 @@ const styles = {
 
 const Activity = () => {
   return (
-    <div className={styles.activity}>
+    <div className={styles.activity} >
       <div className={styles.title}>
         Friend Activity
         <img src='assets/friend.svg' alt='' />

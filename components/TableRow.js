@@ -1,10 +1,18 @@
-import { useContext } from 'react'
-import { SpotifyContext } from '../context/context'
-import { songs } from '../data/songs'
+import { useContext } from "react";
+import { SpotifyContext } from "../context/context";
+// import { songs } from "../data/songs";
+import { useState, useEffect } from "react";
 
 const TableRow = ({ song }) => {
-  const { playOnSelect } = useContext(SpotifyContext)
-  // console.log("table row",song)
+  const { playOnSelect } = useContext(SpotifyContext);
+  // console.log("index",song.id)
+
+  // const [id, setID] = useState(1);
+
+  // const incrementCount = () => {
+  //   setID(id + 1);
+  //   return id
+  // };
 
   return (
     <tbody>
@@ -15,7 +23,7 @@ const TableRow = ({ song }) => {
           <div>
             {/* <p className="font-bold">TITLE</p>
             <p className="opacity-50">Artist</p> */}
-            <p className="font-bold">{song.title}</p> 
+            <p className="font-bold">{song.title}</p>
             {/* <p className="opacity-50">{'artist'}</p> */}
             <p className="opacity-50">{song.artiste}</p>
           </div>
@@ -28,11 +36,11 @@ const TableRow = ({ song }) => {
         <th className={styles.th}>{song.songLength}</th>
       </tr>
     </tbody>
-  )
-}
+  );
+};
 
-export default TableRow
+export default TableRow;
 
 const styles = {
   th: `pb-5 hover:opacity-50 cursor-pointer`,
-}
+};

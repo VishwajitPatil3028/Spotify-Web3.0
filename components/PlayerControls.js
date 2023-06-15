@@ -9,6 +9,7 @@ import playRounded from "../assets/playRounded.svg";
 import pauseIcon from "../assets/pause.svg";
 import { useContext } from "react";
 import { SpotifyContext } from "../context/context";
+import { SpotifyProvider } from "../context/context";
 
 const styles = {
   albumCoverContainer: `w-20 h-20 mr-3`,
@@ -24,6 +25,9 @@ const styles = {
 };
 
 const PlayerControls = ({songs}) => {
+
+  // console.log("Songs are here In player controls :", songs);
+
   const {
     currentSong,
     isPlaying,
@@ -119,7 +123,7 @@ const PlayerControls = ({songs}) => {
             onClick={(e) => playPrevious(songs)}
             className={styles.controlIcon}
           >
-            <Image src={previous} alt="" />
+            <Image src={previous} alt=""  />
           </div>
 
           {isPaused ? (
